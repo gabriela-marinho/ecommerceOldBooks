@@ -3,6 +3,9 @@ import axios from 'axios';
 import React from 'react';
 import { Container, Title, Form, Terms, Button } from "./styles"; 
 
+import Navbar from "../../components/Navbar/Navbar";
+import Footer from "../../components/Footer/Footer";
+
 export default function Register(){
 
     const[name,setName] = useState('');
@@ -29,6 +32,7 @@ export default function Register(){
     }
 
     return(
+    
         <Container>
 
             <Title>Crie sua conta aqui</Title>
@@ -63,5 +67,6 @@ export default function Register(){
                 
             </Form>
         </Container>
+        
     )
 }

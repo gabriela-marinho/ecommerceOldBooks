@@ -9,17 +9,18 @@ justify-content: space-between;
 `;
 
 export const Logo = styled.a`
-background-color: #e60012;
-padding: 1.2rem 0;
-img {
-  width: 6rem;
-  margin: 0 1rem;
-}
+   background-color: white;
+   padding: 1.2rem 0;
+   img {
+     width: 4rem;
+     margin: 0 0rem;
+   }
 `;
 
 export const List = styled.ul`
 display: flex;
 list-style: none;
+
 li {
   a {
     text-decoration: none;
@@ -33,12 +34,14 @@ li {
       padding: 0 0.2rem;
     }
     &:hover {
-      color: #e60012;
+      color: #ffa31a
+      ;
       cursor: pointer;
-      transition: all 200ms ease;
+      transition: all 300ms ease;
     }
   }
 }
 `;
+ 
 
-`;
+ 
