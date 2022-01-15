@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  database:
+    image: postgres
+    ports:
+      - '5432:5432'
+    container_name: oldbooks
+    restart: always
+    volumes:
+      - oldbooks-disk:/var/lib/postgresql/database
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: oldbooks
+
+volumes:
+  oldbooks-disk:

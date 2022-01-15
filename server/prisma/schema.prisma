@@ -1,0 +1,38 @@
+
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+// TODA VEZ Q O SCHEMA FOR ALTERADO FAZER :
+// NPX PRISMA GENERATE
+// NPX PRISMA MIGRATE DEV
+model User {
+  id String @id @default(uuid())
+  name String
+  nickname String @unique
+  email String @unique
+  password String
+  imageUrl String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  book Book[]
+}
+ 
+model Book {
+  id String @id @default(uuid())
+  name String
+  imageUrl String
+  resume String
+  year Int
+  autor String
+  price Float
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  users User[]
+}
+
